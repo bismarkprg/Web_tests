@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="fun"></p>
+    <script>
+        document.getElementById("fun").innerHTML = palindrome("A man, a plan, a canal - Panama");
+        function palindrome(string) {
+            string = string.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+            let inv = string.split("").reverse().join("");
+            if (string == inv) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

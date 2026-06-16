@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="fun"></p>
+    <script>
+        document.getElementById("fun").innerHTML = palindrome("rotator");
+        function palindrome(word) {
+            word = word.toLowerCase();
+            let inv = word.split("").reverse().join("");
+            if (word == inv) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
